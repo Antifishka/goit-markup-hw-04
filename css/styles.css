@@ -4,6 +4,7 @@
   --main-text-color: #757575;
   --secondary-text-color: #212121;
   --accent-color: #2196f3;
+  --icons-color: #AFB1B8;
 }
 
 body {
@@ -128,7 +129,7 @@ padding-bottom: 94px;
 color: var(--accent-color);
 }
 
-.contacts{
+.contacts-list{
   display: flex;
   margin-left: auto;
 }
@@ -138,7 +139,8 @@ color: var(--accent-color);
 }
 
 .contact-link {
-  display: block;
+  display: flex;
+  align-items: baseline;
   padding-top: 32px;
   padding-bottom: 32px;
 
@@ -154,13 +156,33 @@ color: var(--accent-color);
   color: var(--accent-color);
 }
 
+.contact-icon {
+  fill: currentColor;
+  margin-right: 10px;
+}
+
 /* ================= Герой ================= */
 .hero-section{
   padding: 200px 0;
-
-  background: #2F303A;
   text-align: center;
+  background-color: #C4C4C4;
 }
+
+.overlay{
+max-width: 1600px;
+height: 600px;
+margin-left: auto;
+margin-right: auto;
+outline: 1px solid black;
+background-image: linear-gradient(
+  to right,
+  rgba(47, 48, 58, 0.4),
+  rgba(47, 48, 58, 0.4)),
+url(../images/background/background-img.jpg);
+background-repeat: no-repeat;
+background-position: center;
+
+} 
 
 .hero-title {
   width: 696px;
@@ -210,6 +232,18 @@ justify-content: space-between;
 
 .features-item:last-child {
   margin-right: 0;
+}
+
+.features-thumb{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+
+  background-color: #F5F4FA;
+  border-radius: 4px;
 }
 
 .features-title {
@@ -291,12 +325,83 @@ justify-content: space-between;
 }
 
 .employee-position {
+margin-bottom: 16px;
+
   color: var(--main-text-color);
   font-weight: 400;
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
   letter-spacing: 0.03em;
+}
+
+.socials-list{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.socials-item:not(:last-child){
+  margin-right: 10px;
+}
+
+.socials-link{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+
+  background-color: #fff;
+  color: var(--icons-color);
+  border-radius: 50%;
+}
+
+.socials-link:hover,
+.socials-link:focus{
+  background-color: var(--accent-color);
+  color: #ffffff;
+}
+ 
+.socials-icon{
+  fill: currentColor;
+}
+
+/* ================= Постоянные клиенты ================= */
+
+.client-list{
+display: flex;
+justify-content: space-between;
+}
+
+.client-item{
+  margin-right: 30px;
+}
+
+.client-item:last-child {
+  margin-right: 0;
+}
+
+.client-thumb{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+
+  color: var(--icons-color);
+  border: 1px solid var(--icons-color);
+  border-radius: 4px;
+}
+
+.client-thumb:hover,
+.client-thumb:focus{
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+}
+
+.client-icon{
+  fill: currentColor;
 }
 
 /* ================= Футер ================= */
@@ -342,6 +447,58 @@ margin-bottom: 9px;
   letter-spacing: 0.03em; 
 }
 
+.footer-list{
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+
+.footer-item:not(:last-child){
+  margin-right: 70px;
+}
+
+.footer-title{
+  margin-bottom: 20px;
+
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;  
+}
+
+.footer-socials-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-socials-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.footer-socials-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #FFFFFF;
+  border-radius: 50%;
+}
+
+.footer-socials-link:hover,
+.footer-socials-link:focus {
+  background-color: var(--accent-color);
+}
+
+.footer-socials-icon {
+  fill: currentColor;
+}
+
 /* ================= Портфолио ================= */
 
 /* ================= Проэкты ================= */
@@ -384,6 +541,10 @@ margin-bottom: 50px;
 .filter-btn:focus {
   background-color: var(--accent-color);
   color: #fff;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 
+  0px 1px 2px rgba(0, 0, 0, 0.08), 
+  0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
 }
 
 .active {
@@ -408,6 +569,14 @@ margin-bottom: 50px;
 
 .project-item:nth-last-child(-n+3){
   margin-bottom: 0;
+}
+
+.project-item:hover,
+.project-item:focus{
+  border: 1px solid #EEEEEE;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
+  0px 4px 4px rgba(0, 0, 0, 0.06), 
+  1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .project-description{
